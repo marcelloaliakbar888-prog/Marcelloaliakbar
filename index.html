@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rental Mobil</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Rental Mobil</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+     <ul class="navbar-nav ms-auto align-items-center">
+
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="transaksi.html">Transaksi</a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="daftar_transaksi.html">Daftar Transaksi</a>
+  </li>
+
+  <!-- PROFIL -->
+  <li class="nav-item dropdown ms-3">
+    <a class="nav-link dropdown-toggle d-flex align-items-center"
+       href="#"
+       id="profileDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false">
+
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+           width="32"
+           height="32"
+           class="rounded-circle me-2">
+
+      <span id="namaUser">User</span>
+    </a>
+
+    <ul class="dropdown-menu dropdown-menu-end bg-dark text-light">
+      <li class="dropdown-header text-secondary">
+        Profil Saya
+      </li>
+
+      <li>
+        <a class="dropdown-item text-light" href="profil.html" onclick="lihatProfil()">
+          👤 Lihat Profil
+        </a>
+      </li>
+
+      <li><hr class="dropdown-divider"></li>
+
+      <li>
+        <a class="dropdown-item text-danger" href="#" onclick="logout()">
+          🚪 Logout
+        </a>
+      </li>
+    </ul>
+  </li>
+
+</ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <h1 class="text-center">Selamat Datang di Aplikasi Rental Mobil</h1>
+  <p class="text-center text-secondary">
+    Aplikasi ini digunakan untuk mencatat transaksi penyewaan mobil.
+  </p>
+
+  <hr class="border-secondary">
+
+  <h3 class="mt-4">📌 Cara Menggunakan Aplikasi</h3>
+
+  <div class="card bg-black text-light mt-3">
+    <div class="card-body">
+      <ol>
+        
+
+        <li class="mt-3">
+          <strong>Masuk ke Menu Transaksi</strong><br>
+          Setelah login, pilih menu <b>Transaksi</b> pada navbar.
+        </li>
+
+        <li class="mt-3">
+          <strong>Input Data Rental Mobil</strong><br>
+          Isi:
+          <ul>
+            <li>Nama Mobil</li>
+            <li>Harga sewa per hari</li>
+            <li>Jumlah hari sewa</li>
+          </ul>
+          Sistem akan menghitung <b>total pembayaran</b> secara otomatis.
+        </li>
+
+        <li class="mt-3">
+          <strong>Simpan Transaksi</strong><br>
+          Klik tombol <b>Simpan</b> untuk menyimpan data transaksi.
+        </li>
+
+        <li class="mt-3">
+          <strong>Lihat Daftar Transaksi</strong><br>
+          Pilih menu <b>Daftar Transaksi</b> untuk melihat seluruh transaksi
+          yang telah disimpan.
+        </li>
+
+        <li class="mt-3">
+          <strong>Logout</strong><br>
+          Klik tombol <b>Logout</b> untuk keluar dari aplikasi dengan aman.
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

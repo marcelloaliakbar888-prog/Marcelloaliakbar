@@ -1,0 +1,319 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+  color: #cccccc !important;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #00e0ff !important;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.8);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.text-secondary {
+  color: #b0b0b0 !important;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== ACCORDION ===== */
+.accordion-item {
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  color: #ffffff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(90deg, #00e0ff, #007bff);
+  color: #000;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background: #0f0f0f;
+  color: #e0e0e0;
+}
+
+/* ===== FORM INPUT ===== */
+input, select {
+  background-color: #111 !important;
+  border: 1px solid #333 !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+input:focus, select:focus {
+  border-color: #00e0ff !important;
+  box-shadow: 0 0 10px rgba(0, 224, 255, 0.7) !important;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+  background: linear-gradient(90deg, #00e0ff, #007bff);
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.8);
+}
+
+.btn-danger {
+  border-radius: 25px;
+}
+
+/* ===== TABLE ===== */
+.table {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table th {
+  background: #111;
+  color: #00e0ff;
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+}
+/* =============================== */
+/* MODAL PROFIL */
+/* =============================== */
+
+#profilModal .modal-content {
+  background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 224, 255, 0.35);
+  box-shadow: 0 0 35px rgba(0, 224, 255, 0.45);
+  animation: profilZoom 0.35s ease-in-out;
+}
+
+/* Header */
+#profilModal .modal-header {
+  border-bottom: 1px solid rgba(0, 224, 255, 0.35);
+}
+
+#profilModal .modal-title {
+  color: #00e0ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Tombol Close */
+#profilModal .btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+#profilModal .btn-close:hover {
+  opacity: 1;
+}
+
+/* Foto Profil */
+#profilModal img {
+  border: 3px solid #00e0ff;
+  padding: 5px;
+  background: #000;
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.8);
+  transition: transform 0.3s ease;
+}
+
+#profilModal img:hover {
+  transform: scale(1.1);
+}
+
+/* Nama & Role */
+#profilNama {
+  margin-top: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#profilRole {
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+/* Isi Profil */
+#profilModal .modal-body p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#profilModal .modal-body strong {
+  color: #00e0ff;
+}
+
+/* Footer */
+#profilModal .modal-footer {
+  border-top: 1px solid rgba(0, 224, 255, 0.35);
+}
+
+#profilModal .btn-secondary {
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid #00e0ff;
+  color: #00e0ff;
+  transition: 0.3s;
+}
+
+#profilModal .btn-secondary:hover {
+  background: #00e0ff;
+  color: #000;
+  box-shadow: 0 0 18px rgba(0, 224, 255, 0.9);
+}
+
+/* Animasi */
+@keyframes profilZoom {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* =============================== */
+/* PROFIL PAGE */
+/* =============================== */
+
+.profil-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 30px 35px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 35px rgba(0, 224, 255, 0.35);
+  border: 1px solid rgba(0, 224, 255, 0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* FOTO PROFIL BULAT */
+.profil-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid #00e0ff;
+  padding: 5px;
+  background-color: #000;
+
+  box-shadow: 0 0 25px rgba(0, 224, 255, 0.9);
+  margin-bottom: 15px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profil-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(0, 224, 255, 1);
+}
+
+/* ROLE */
+.profil-role {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+/* INFO */
+.profil-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.profil-info strong {
+  color: #00e0ff;
+}
+
+
+
+
